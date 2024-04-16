@@ -10,7 +10,7 @@ void main() {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Color.fromARGB(254, 255, 255, 255),
+                Color.fromARGB(255, 255, 255, 255),
                 Color.fromARGB(255, 36, 204, 255)
               ],
             ),
