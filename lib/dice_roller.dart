@@ -16,8 +16,15 @@ class _DiceRollerState extends State<DiceRoller> {
 
 //rollDice function
   void rollDice() {
-    print('Button pressed');
-    activeDiceImage = 'assets/images/dice-images/dice-4.png';
+    // print('Button pressed');
+    setState(() {
+      // random number generator
+      final randomNumber = (1 +
+              (6 * (DateTime.now().microsecondsSinceEpoch % 1000000) / 1000000))
+          .floor();
+      activeDiceImage = 'assets/images/dice-images/dice-$randomNumber.png';
+    });
+    // activeDiceImage = 'assets/images/dice-images/dice-4.png';
   }
 
 // separate out the dice roller into stateful is not enough, since flutter wont automatically rebuild the widget with the new UI
